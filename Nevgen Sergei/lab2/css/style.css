@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', arial, sans-serif;
+}
+
+.default-hidden {
+    display: none;
+}
+
+.menu {
+    background-color: #373c3f;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: block;
+    padding: 3% 1.56%;
+}
+
+.menu li:first-child {
+    margin-left: 5%;
+}
+
+.menu a {
+    display: block;
+    color: #dddddd;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.47vw;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.ad {
+    background: linear-gradient(to right, #25b4c7, #088ea7) ;
+    box-sizing: border-box;
+    padding: 19% 19% 15% 7.42%;
+}
+
+.ad img {
+    width: 5%;
+    height: 5%;
+    float: right;
+}
+
+.ad .text {
+    color: white;
+    font-size: 6.1vw;
+    line-height: 7.8vw;
+    font-weight: normal;
+    margin: 0;
+}
+
+.ad .link {
+    margin-top: 5%;
+}
+
+.ad .link a {
+    color: #a8d4de;
+    font-size: 3.12vw;
+    text-decoration: none;
+}
+
+.text-box {
+    display: flex;
+}
+
+.text-box .quote {
+    width: 77.64%;
+    background-color: #27212C;
+    color: #9282A0;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2.9vw;
+    padding: 10.5% 0;
+    font-weight: normal;
+    margin: 0;
+}
+
+.text-box .btn {
+    float: left;
+    width: 22.36%;
+    margin: 0 auto;
+    background: #BC3183 url("../img/arrow.png") no-repeat center center;
+    background-size: 20%;
+}
+
+.blocks {
+    display: flex;
+
+}
+.blocks img {
+    display: block;
+    width: 100%;
+}
+
+.blocks div {
+    width: 33.33%;
+}
+
+.info {
+    padding: 5.37% 7.61% 8% 7.61%;
+    background-color: #ebebeb;
+}
+
+.info .link {
+    color: #088ca5;
+    font-size: 3.12vw;
+    margin-bottom: 2.9%;
+}
+
+.info .text-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .column {
+    font-size: 1.37vw;
+    line-height: 2.54vw;
+    color: #515151;
+    width: 42.5%;
+}
+
+.blocks .arrow {
+    background: #5b0fa1 url("../img/arrow.png") no-repeat center center;
+    background-size: 10%;
+}
+
+@media screen and (max-width: 640px) {
+
+    .default-visible {
+        display: none;
+    }
+
+    .default-hidden {
+        display: block;
+    }
+
+    .menu-nav {
+        background-color: #373c3f;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .menu-nav .nav-text {
+        font-size: 3vw;
+        padding: 3% 5%;
+    }
+
+    .menu-btn {
+        background: #202529 url("../img/hamburger.png") no-repeat center center;
+        background-size: 100%;
+        width: 10%;
+    }
+
+    .side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 10%;
+        transition: 0.4s;
+    }
+
+    .side-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .side-nav a {
+        padding: 2% 5% 2% 10%;
+        text-decoration: none;
+        font-size: 3.5vw;
+        color: #818181;
+        display: block;
+    }
+
+    .side-nav a:hover {
+        color: white;
+    }
+
+    .side-nav .close-btn {
+        position: absolute;
+        top: 0;
+        right: 2%;
+        font-size: 8vw;
+    }
+
+    .blocks {
+        flex-direction: column;
+    }
+
+    .blocks .arrow {
+        padding-top: 86.5%;
+    }
+
+    .blocks div {
+        width: 100%;
+    }
+
+    .info .link {
+        font-size: 4.7vw;
+        margin-top: 5%;
+        margin-bottom: 6%;
+    }
+
+    .info .column {
+        font-size: 3.43vw;
+        line-height: 6.87vw;
+        width: 100%;
+    }
+}
+
+
