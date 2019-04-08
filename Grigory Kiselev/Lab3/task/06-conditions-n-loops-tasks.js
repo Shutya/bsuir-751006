@@ -403,8 +403,22 @@ function getDigitalRoot(num) {
  *   '{)' = false
  *   '{[(<{[]}>)]}' = true 
  */
-function isBracketsBalanced(str) {
-    throw new Error('Not implemented');
+function isBracketsBalanced(str)  {
+    const brType1 = '[]';
+    const brType2 = '()';
+    const brType3 = '{}';
+    const brType4 = '<>';
+
+    let strCopy = String(str);
+
+    while (strCopy.includes(brType1) || strCopy.includes(brType2) || strCopy.includes(brType3) || strCopy.includes(brType4)) {
+        strCopy = strCopy.replace(brType1, '');
+        strCopy = strCopy.replace(brType2, '');
+        strCopy = strCopy.replace(brType3, '');
+        strCopy = strCopy.replace(brType4, '');
+    }
+
+    return strCopy.length === 0;
 }
 
 
@@ -440,7 +454,51 @@ function isBracketsBalanced(str) {
  *
  */
 function timespanToHumanString(startDate, endDate) {
-    throw new Error('Not implemented');
+    let millisecondsDefference = endDate - startDate;
+
+    if (millisecondsDefference <= (45 * 1000)){
+        return 'a few seconds ago';
+    } else if (millisecondsDefference <= (90 * 1000)){
+        return 'a minute ago';
+    }else if (millisecondsDefference <= (45 * 60 * 1000)){
+        let minutes = Math.floor(millisecondsDefference / (60 * 1000));
+        if (millisecondsDefference % (60 * 1000) > (30 * 1000)) {
+            minutes++;
+        }
+        return `${minutes} minutes ago`;
+    }else if (millisecondsDefference <= (90 * 60 * 1000)){
+        return 'an hour ago';
+    }else if (millisecondsDefference <= (22 * 60 * 60 * 1000)){
+        let hours = Math.floor(millisecondsDefference / (60 * 60 * 1000));
+        if (millisecondsDefference % (60 * 60 * 1000) > (60 * 60 * 1000 / 2)) {
+            hours++;
+        }
+        return `${hours} hours ago`;
+    }else if (millisecondsDefference <= (36 * 60 * 60 * 1000)){
+        return 'a day ago';
+    }else if (millisecondsDefference <= (25 * 24 * 60 * 60 * 1000)){
+        let days = Math.floor(millisecondsDefference / (24 * 60 * 60 * 1000));
+        if (millisecondsDefference % (24 * 60 * 60 * 1000) > (24 * 60 * 60 * 1000 / 2)) {
+            days++;
+        }
+        return `${days} days ago`;
+    }else if (millisecondsDefference <= (45 * 24 * 60 * 60 * 1000)){
+        return 'a month ago';
+    }else if (millisecondsDefference <= (345 * 24 * 60 * 60 * 1000)){
+        let months = Math.floor(millisecondsDefference / (30 * 24 * 60 * 60 * 1000));
+        if (millisecondsDefference % (30 * 24 * 60 * 60 * 1000) > (30 * 24 * 60 * 60 * 1000 / 2)) {
+            months++;
+        }
+        return `${months} months ago`;
+    }else if (millisecondsDefference <= (545 * 24 * 60 * 60 * 1000)){
+        return 'a year ago';
+    } else{
+        let years = Math.floor(millisecondsDefference / (365 * 24 * 60 * 60 * 1000));
+        if (millisecondsDefference % (365 * 24 * 60 * 60 * 1000) > (365 * 24 * 60 * 60 * 1000 / 2)) {
+            years++;
+        }
+        return `${years} years ago`;
+    }
 }
 
 
@@ -464,7 +522,7 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
-    throw new Error('Not implemented');
+    return num.toString(n);
 }
 
 
@@ -481,7 +539,34 @@ function toNaryString(num, n) {
  *   ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'] => '/'
  */
 function getCommonDirectoryPath(pathes) {
-    throw new Error('Not implemented');
+    if (pathes.length === 0) {
+        return '';
+    }
+
+    let commonDirectoryPath = '';    
+    
+    let pathesLengths = pathes.map(function(value) {
+        return value.length;
+    });
+    let pathMinLength = Math.min(...pathesLengths);
+
+    for (let i = 0; i < pathMinLength; i++) {
+        let currCharIsSameForAll = true;
+        let currChar = pathes[0][i];
+        for (let j = 1; j < pathes.length; j++) {
+            if (pathes[j][i] !== currChar) {
+                currCharIsSameForAll = false;
+                break;                
+            }
+        }
+        if (!currCharIsSameForAll) {
+            break;
+        } else {
+            commonDirectoryPath += currChar;
+        }        
+    }
+
+    return commonDirectoryPath.substring(0, commonDirectoryPath.lastIndexOf('/') + 1);
 }
 
 
@@ -503,8 +588,24 @@ function getCommonDirectoryPath(pathes) {
  *                         [ 6 ]]
  *
  */
-function getMatrixProduct(m1, m2) {
-    throw new Error('Not implemented');
+function getMatrixProduct(m1, m2){
+    let mResult = new Array(m1.length);
+    mResult.fill(0);
+
+    for (let i = 0; i < mResult.length; i++) {
+        mResult[i] = new Array(m2[i].length);
+        mResult[i].fill(0);
+    }
+
+    for (let i = 0; i < m1.length; i++) {
+        for (let j = 0; j < m2[0].length; j++) {
+            for (let k = 0; k < m1[0].length; k++) {
+                mResult[i][j] += m1[i][k] * m2[k][j];
+            }
+        }    
+    }
+
+    return mResult;
 }
 
 
@@ -539,7 +640,33 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
-    throw new Error('Not implemented');
+    let result = '';
+
+    for (let i = 0; i < 3; i++) {
+        if ((position[i][0] === position[i][1]) && (position[i][1] === position[i][2]) && (position[i][0] === 'X' || position[i][0] === '0')) {
+            result = position[i][0];
+            return result;
+        }
+    }    
+
+    for (let j = 0; j < 3; j++) {
+        if ((position[0][j] === position[1][j]) && (position[1][j] === position[2][j]) && (position[0][j] === 'X' || position[0][j] === '0')) {
+            result = position[0][j];
+            return result;
+        }
+    }    
+
+    if ((position[0][0] === position[1][1]) && (position[1][1] === position[2][2]) && (position[1][1] === 'X' || position[1][1] === '0')) {
+        result = position[1][1];
+        return result;
+    }    
+
+    if ((position[2][0] === position[1][1]) && (position[1][1] === position[0][2]) && (position[1][1] === 'X' || position[1][1] === '0')) {
+        result = position[1][1];
+        return result;
+    }    
+
+    return undefined;
 }
 
 
