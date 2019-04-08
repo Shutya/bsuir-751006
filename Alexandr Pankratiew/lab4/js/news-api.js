@@ -81,7 +81,7 @@ function fillSources() {
    fetch(req).then(function(response) {
       return response.json()
    }).then(function(json){
-      var select = document.getElementById("search__source");
+      let select = document.getElementById("search__source");
 
       if(json.status) {
          let sources = json.sources
@@ -91,14 +91,12 @@ function fillSources() {
             el.value = source.id
             select.appendChild(el)
          })
-
-
       }
    })
 }
 
 function fillNews() {
-   let url = 'https://newsapi.org/v2/top-headlines?' +
+   let url = API_DOMAIN + 'top-headlines?' +
           'language=en&' +
           'apiKey=' + API_KEY + "&" +
           'page=' + current_page++ + '&' +
@@ -124,7 +122,7 @@ function fillNews() {
            news.appendChild(renderNewsItem(article))
          })
 
-         if(articles.length == 0 || current_page == MAX_PAGE) {
+         if(articles.length == 0 || current_page == MAX_PAGE + 1) {
             let news = document.getElementById('next-news')
             news.style.display = 'none'
          }
@@ -169,5 +167,5 @@ searchButton.onclick = function() {
    makeSearch()
 }
 
-fillNews();
+fillNews()
 fillSources()
