@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>BrakhNews</title>
+
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   <header class="header">
+      <div class="header__wrapper">
+         <div class="logo black-logo">
+            <a href="">B<span>rakh</span>N<span>ews</span></a>
+         </div>
+
+         <div class="search">
+            <select name="search-source" class="search__source" id="search__source">
+               <option value="none" selected>Любой издатель</option>
+            </select>
+            <input type="text" name="search-input" placeholder="Input text..." class="search__input" id="search__input">
+            <input type="button" name="search-button" value="Search" class="search__button" id="search__button">
+         </div>
+      </div>
+   </header>
+
+<main class="main">
+   <section class="news black">
+      <div class="out-news">
+         <h1 class="center">Last news</h1>
+         <div class="news" id="news">
+
+			</div>
+         <button type="button" name="next-news" class="next-news" id="next-news">Other news</button>
+
+      </div>
+   </section>
+</main>
+
+<footer>
+   <div class="logo black-logo">
+      <a href="">B<span>rakh</span>N<span>ews</span></a>
+   </div>
+   <div class="social">
+      <ul>
+         <li><a href=""><i class="fa fa-vk"></i></a></li>
+         <li><a href=""><i class="fa fa-instagram"></i></a></li>
+         <li><a href=""><i class="fa fa-twitter"></i></a></li>
+      </ul>
+   </div>
+
+</footer>
+<script type="text/javascript" src="js/news-api.js">
+</script>
+</body>
+</html>
