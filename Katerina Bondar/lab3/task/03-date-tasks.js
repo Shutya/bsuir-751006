@@ -100,15 +100,6 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    let milsec = new Date(null);
-    milsec.setMilliseconds(date);
-    let hours = +(milsec.toISOString().substr(11,2));
-    hours = hours >= 12 ? hours - 12 : hours;  
-    let minutes = +(milsec.toISOString().substr(14,2));
-    let angleHours = (hours+(minutes/60))*30;
-    let angleMinutes = minutes*6;
-    let minres = Math.min((360- (angleHours - angleMinutes)),(angleHours - angleMinutes));
-    return Math.abs(minres) * Math.PI/180;
 }
 
 module.exports = {

@@ -29,70 +29,6 @@
  *   'NULL'      => false 
  */
 function findStringInSnakingPuzzle(puzzle, searchStr) {
-
-    class RouteMap {
-        constructor() {
-            this._route = {};
-            this._width = puzzle[0].length;
-            this._height = puzzle.length;
-        }
-
-        _key(x, y) {
-            return `${x},${y}`;
-        }
-
-        markAvailable(x, y) {
-            this._route[this._key(x, y)] = false;
-        }
-
-        markVisited(x, y) {
-            this._route[this._key(x, y)] = true;
-        }
-
-        isAvailable(x, y) {
-            return x >= 0
-                && x < this._width
-                && y >= 0
-                && y < this._height
-                && !this._route[this._key(x, y)];
-        }
-    }
-
-    function* getSiblings(x, y) {
-        yield [x - 1, y];
-        yield [x + 1, y];
-        yield [x, y - 1];
-        yield [x, y + 1];
-    }
-
-    function checkRoute(x, y, search, route) {
-        if (!route.isAvailable(x, y) || puzzle[y][x] !== search[0]) {
-            return false;
-        }
-        if (search.length === 1) {
-            return true;
-        }
-        route.markVisited(x, y);
-        const nextSearch = search.slice(1);
-
-        for (let [sx, sy] of getSiblings(x, y)) {
-            if (checkRoute(sx, sy, nextSearch, route)) {
-                return true;
-            }
-        }
-
-        route.markAvailable(x, y);
-        return false;
-    }
-
-    for (let y = 0; y < puzzle.length; ++y) {
-        for (let x = 0; x < puzzle[0].length; ++x) {
-            if (checkRoute(x, y, searchStr, new RouteMap())) {
-                return true;
-            }
-        }
-    }
-    return false;
 }
 
 
@@ -151,11 +87,6 @@ function* getPermutations(chars) {
  *    [ 1, 6, 5, 10, 8, 7 ] => 18  (купить по 1,6,5 и затем продать все по 10)
  */
 function getMostProfitFromStockQuotes(quotes) {
-    if (!quotes.length) return 0;
-    let maxNum = Math.max.apply(null, quotes);
-    let indMax = quotes.lastIndexOf(maxNum);
-    return quotes.slice(0, indMax).reduce((prev, curr) => prev += maxNum - curr, 0) +
-        getMostProfitFromStockQuotes(quotes.slice(indMax + 1));
 }
 
 
