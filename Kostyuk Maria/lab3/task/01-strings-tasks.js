@@ -22,7 +22,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-    throw new Error('Not implemented');
+    return value1 + value2;
 }
 
 
@@ -38,7 +38,7 @@ function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 function getStringLength(value) {
-    throw new Error('Not implemented');
+	return value.length
 }
 
 /**
@@ -55,12 +55,13 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-    throw new Error('Not implemented');
+	return `Hello, ${firstName} ${lastName}!`
 }
 
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
+
  * @param {string} value
  * @return {string}
  *
@@ -69,7 +70,8 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-    throw new Error('Not implemented');
+	return value.slice(7,-1);
+	//cop[first,last] //  [-x] = [lenght -x] 
 }
 
 
@@ -84,12 +86,13 @@ function extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 function getFirstChar(value) {
-    throw new Error('Not implemented');
+	return value.charAt(0);
 }
 
 /**
  * Removes a leading and trailing whitespace characters from string.
  *
+ * @example
  * @param {string} value
  * @return {string}
  *
@@ -99,7 +102,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-    throw new Error('Not implemented');
+    return value.trim();
 }
 
 /**
@@ -114,7 +117,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(value, count) {
-    throw new Error('Not implemented');
+    return value.repeat(count);
 }
 
 /**
@@ -130,7 +133,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-    throw new Error('Not implemented');
+	return str.replace(value, '');
 }
 
 /**
@@ -145,7 +148,7 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-    throw new Error('Not implemented');
+	return str.slice(1,-1);
 }
 
 
@@ -160,7 +163,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-    throw new Error('Not implemented');
+    return str.toUpperCase();
 }
 
 /**
@@ -174,7 +177,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-    throw new Error('Not implemented');
+    return str.split(';');
 }
 
 /**
@@ -201,7 +204,12 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-    throw new Error('Not implemented');
+	let rectangle = '│' + ' '.repeat(width - 2) + '│\n';
+	
+	rectangle = rectangle.repeat(height - 2);
+	rectangle = '┌' + '─'.repeat(width - 2) + '┐\n' + rectangle;
+	rectangle = rectangle + '└' + '─'.repeat(width - 2) + '┘\n';
+    return rectangle;
 }
 
 
@@ -221,7 +229,13 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-    throw new Error('Not implemented');
+	var str_2 = '';
+	let alphabet_1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz !?@#$%^&*(){}[]<>+-=,._';
+	let alphabet_2 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm !?@#$%^&*(){}[]<>+-=,._';
+	for (var i = 0; i < str.length; i++){
+		str_2 += alphabet_2.charAt(alphabet_1.indexOf(str.charAt(i)));
+	}
+	return str_2;
 }
 
 /**
@@ -238,7 +252,9 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-    throw new Error('Not implemented');
+	if (Object.prototype.toString.call(value) == "[object String]")
+		return true;	
+	return false;
 }
 
 
@@ -267,7 +283,11 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-    throw new Error('Not implemented');
+	 var cards = [	'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
+					'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
+					'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
+					'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'];
+ 	return cards.indexOf(value);
 }
 
 

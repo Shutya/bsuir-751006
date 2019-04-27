@@ -22,7 +22,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-    throw new Error('Not implemented');
+    return width * height;
 }
 
 
@@ -38,7 +38,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    throw new Error('Not implemented');
+    return radius * 2 * Math.PI;
 }
 
 /**
@@ -54,7 +54,8 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-    throw new Error('Not implemented');
+
+    return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -73,7 +74,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+    return Math.hypot(y2 - y1, x2 - x1);
 }
 
 /**
@@ -89,7 +90,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-    throw new Error('Not implemented');
+    return -b / a;
 }
 
 
@@ -111,7 +112,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+    //                (a,b) = |a|*|b|*cos(y)
+    //                (a,b) = a1*b1 + a2*b2
+    //                |a| = length(a)
+    return Math.acos((x1 * x2 + y1 * y2) / (Math.hypot(x1, y1) * Math.hypot(x2, y2)));
 }
 
 /**
@@ -127,7 +131,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    throw new Error('Not implemented');
+    return value % 10;
 }
 
 
@@ -143,7 +147,15 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    throw new Error('Not implemented');
+    return parseFloat(value);
+    // return value тоже проходит тест, а не должно
+    // можно добавить в тест проверку на тип
+
+    // например
+    //      Object.prototype.toString.call((value));
+    //      Object.prototype.toString.call(parseFloat(value));
+    // вернут [object String] и [object Number] соответственно 
+    // текущий тест нуждается в доработке
 }
 
 /**
@@ -160,7 +172,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a,b,c) {
-    throw new Error('Not implemented');
+    return Math.hypot(a, b, c);
 }
 
 /**
@@ -181,7 +193,8 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    throw new Error('Not implemented');
+    let temp = Math.pow(10, pow);
+    return Math.round(num / temp) * temp;
 }
 
 /**
@@ -202,7 +215,14 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+    if (n == 2)
+        return true;
+    let i_last = Math.sqrt(n);
+    for(var i = 2; i <= i_last; i++)
+        if(n % i == 0)
+            return false; 
+
+    return true;
 }
 
 /**
@@ -221,7 +241,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+    return parseFloat(value) || def;
 }
 
 module.exports = {

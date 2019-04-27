@@ -140,11 +140,6 @@ function doRectanglesOverlap(rect1, rect2) {
 
 
 /**
- * Returns true, if point l
-}
-
-
-/**
  * Returns true, if point lies inside the circle, otherwise false.
  * Circle is an object of 
  *  {
@@ -292,23 +287,7 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
-    let ccnStr = ccn.toString();
-    let sum = 0;
-    let nDigits = ccnStr.length;
-    let parity = nDigits % 2;
-
-    for(let i = 0; i < nDigits; i++) {
-        let digit = Number.parseInt(ccnStr[i]);
-        if (i % 2 === parity) {
-            digit *= 2;
-        }
-        if (digit > 9) {
-            digit -= 9;
-        }
-        sum += digit;
-    }
-
-    return sum % 10 === 0;
+    throw new Error('Not implemented');
 }
 
 
