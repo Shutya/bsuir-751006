@@ -1,0 +1,283 @@
+@font-face {
+	font-family: "Montserrat";
+	scr: url(fonts/Montserrat-SemiBold.ttf);
+}
+
+* {
+	font-size: 100%;
+	font-family: "Montserrat";
+}
+
+body{
+	width: 100%;
+	margin: auto;
+	background-color: #ebebeb; 
+}
+
+img {
+	vertical-align: middle;
+}
+
+nav{
+	width: 100%;
+	background-color: #373c3f;
+	height: 100px;
+	display: inline-block; 
+} 
+
+nav a{
+	margin: 40px 2vw;
+	display: inline-block;
+	color: #ebebeb;
+	text-decoration: none;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.without-menu, .hide-menu {
+	display: none;
+}
+
+.resource, th {
+	padding: 192px 12% 192px 7%;
+	background: linear-gradient(to top left, #078aa4, #19b4c6);
+	font-size: 30px;
+	color: #a8d7e0;
+}
+
+.resource h2{
+	font-size: 70px;
+	color: #ffffff;
+}
+
+.link-box{
+	display: flex;
+	height: 25vw;
+}
+
+.text-left{
+	width: 75%;
+	background-color: #27212c;
+	justify-content: center;
+	display: inline-flex;
+	align-items: center;
+	color: #9282a0;
+}
+
+.link-right{
+	width: 25%;
+	background-color: #bc3183;
+	justify-content: center;
+	display: inline-flex;
+	align-items: center;
+	float: right;
+}
+
+.link-box h2{
+	font-size: 30px;
+	color: #64586e; 
+}
+
+.blockpic {
+    display: flex;
+	flex-flow: row;
+	padding: 0;
+	margin: 0;
+	list-style-type: none; 
+}
+
+.blockpic img {
+	display: inline;
+	margin: 0;
+}
+
+.blockpic-pic{
+	width: 33.333%;
+}
+
+.blockpic-pic img{
+	width: 100%; 
+	height: auto;
+}
+
+.arrowPic-box{
+	background-color: #5b0fa1;
+	width: 33.333%;
+	justify-content: center;
+	display: inline-flex;
+	align-items: center;
+}
+
+.arrowPic-box img{
+	width: 10% !important; 
+}
+
+.info {
+	background-color: #ebebeb;
+	padding: 40px;
+}
+
+.info  h1 {
+	padding-left: 15px;
+	font-size: 30pt;
+	color: #088ca5;
+}
+
+.info-position{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.info-position article {
+	color: #515151;
+	flex: 1 1 400px;
+	text-align: justify;
+	padding: 0;
+	margin: 15px;
+}
+th {
+  font-weight: normal;
+  border-bottom: 2px solid #1E90FF ;
+  color: white; 
+  padding: 8px 2px;
+  padding-bottom: 2px ;
+  padding-right: 30px ;
+  padding-left: 30px ;
+}
+td {
+   color: white; 
+  padding: 12px 2px; 
+  padding-bottom: 2px ;
+  padding-right: 30px ;
+  padding-left: 30px ;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+	nav {
+		font-size: 30px !important;
+		height: 80px;
+	}
+
+	.without-menu {
+		color: #ebebeb;
+		margin: 1rem 5vw;
+	}
+	
+	.hide-menu {
+		padding: 1px 12px;
+		font-size: 60px;
+	}
+	
+	.resource{
+		padding: 100px 15% 100px 10%;
+		font-size: 30px;
+	}
+		
+	.resource h2{
+		font-size: 55px !important;
+	}
+	
+	.blockpic-pic{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.arrowPic-box{
+		width: 100%;
+		padding-top: 40%;
+		padding-bottom: 40%;
+	}
+
+	.link-box h2{
+		font-size: 30px;
+	}
+
+	.info {
+		padding-top: 10px;
+	}
+
+	.info  h1 {
+		padding: 8px;
+		font-size: 45pt;
+	}
+
+	.info-position article {
+		margin-left: 8px;
+		margin-right: 8px;
+		font-size: 14px;
+	}
+
+	.hide-after-640 {
+		display: none;
+	}
+	
+}
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		font-size: 21px !important;
+		height: 75px;
+	}
+
+	nav a {
+		display: none;
+	}
+
+	.without-menu {
+		display: block;
+		color: #ebebeb;
+		margin: 27px 5vw;
+	}
+
+	.hide-menu {
+		display: block;
+		padding: 7px 30px 7px 30px;
+		font-size: 50px;
+		color: #ebebeb;
+		background-color: #202529;
+	}
+	
+	.resource{
+		padding: 100px 10% 100px 5%;
+		font-size: 40px;
+	}
+		
+	.resource h2{
+		font-size: 70px !important;
+	}
+
+	.link-box h2{
+		font-size: 30px;
+	}
+	
+	.blockpic{
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	
+	.blockpic-pic{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.arrowPic-box{
+		width: 100%;
+		padding-top: 40%;
+		padding-bottom: 40%; 
+
+	}
+
+	.info h1 {
+		font-size: 34pt;
+		color: #088ca5;
+	}
+
+	.hide-after-640 {
+		display: none;
+	}
+	.info-position article {
+		font-size: 22pt;
+    	flex: 1 1 600px;
+	}
+}
