@@ -1,0 +1,68 @@
+body {
+	font-size: 25px;
+	font-style: roboto;
+	background-color: rgb(235, 235, 235);
+	margin:0;
+}
+
+h3 {
+	margin-top: 30px;
+	color: rgb(20, 175, 194);
+	margin-left: 30px;
+	clear: both;
+}
+
+
+div {
+	border:0;
+	line-height: 1px;
+	width: 980px;
+}
+.BigNavigation {
+	width: 980px;
+	height: 100px;
+}
+
+.navigation {
+	width: 640px;
+}
+
+.awesome {
+	width: 980px;
+	height: 600px;
+}
+
+.arow {
+	width: 327px;
+	height: 320px;
+	float: left;
+}
+
+.bridge {
+	width: 326px;
+	height: 320px;
+	float: left;
+}
+
+.smile {
+	width: 327px;
+	height: 320px;
+	float: right;
+}
+
+.Robin {
+	width: 980px;
+}
+
+.left-collom {
+	float: left;
+	margin: 30px;
+	width: 420px;
+	
+}
+
+.right-collom {
+	float: left;
+	margin: 30px;
+	width: 420px;
+}
