@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>BrakhNews</title>
+  </head>
+  <body>
+     <header class="header">
+      <div class="header__wrapper">
+         <div class="logo black-logo">
+            <a href="">B<span>rakh</span>N<span>ews</span></a>
+         </div>
+
+         <div class="search">
+            <select name="search-source" class="search__source" id="main-sources">
+               <option value="none" selected>Любой издатель</option>
+            </select>
+            <input type="text" name="search-input" placeholder="Input text..." class="search__input" id="main-search-input">
+            <input type="button" name="search-button" value="Search" class="search__button" id="main-search-bn">
+         </div>
+      </div>
+   </header>
+    <main class="main">
+
+
+
+
+
+      <section class="news black">
+         <div class="out-news">
+            <h1 class="center">Last news</h1>
+            <div class="news" id="news">
+          <!-- news_content -->
+            </div>
+         </div>
+      </section>
+      <div style="text-align: center;">
+          <h4 id="main-errorLabel" style="display: none">No matches :(</h4>
+      </div>
+      <button class="next-news" id="main-load-bn" style="display: none">Other news</button>
+
+    </main>
+    <footer>
+       <div class="logo black-logo">
+          <a href="">B<span>rakh</span>N<span>ews</span></a>
+       </div>
+       <div class="social">
+          <ul>
+             <li><a href=""><i class="fa fa-vk"></i></a></li>
+             <li><a href=""><i class="fa fa-instagram"></i></a></li>
+             <li><a href=""><i class="fa fa-twitter"></i></a></li>
+          </ul>
+       </div>
+
+    </footer>
+  </body>
+</html>
