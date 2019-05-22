@@ -1,0 +1,110 @@
+body {
+	background-color: rgb(235, 235, 235);
+	margin:0;
+}
+
+.main {
+	padding-top: 13vw;
+	border:0;
+	line-height: 1px;
+}
+
+
+.awesome {
+	width: 100vw;
+	height: 75vw;
+}
+
+.Robin {
+	width: 100vw;
+}
+
+@media (max-width:639px) and (min-width:320px) {
+	
+	.Photoes img {
+		width: 100vw;
+		height: 90vw;
+	}
+	.Text {
+		margin: 30px;
+		width: 80vw;
+		font-size: 20px;
+		line-height: 26px;
+	}	
+
+	.Text h3 {
+		color: rgb(20, 175, 194);
+		font-size: 28px;
+	}
+}
+
+@media (max-width:979px) and (min-width: 640px) {
+	
+	.Photoes img {
+		width: 100vw;
+		height: 90vw;
+	}
+	.Text {
+		margin: 30px;
+		width: 80vw;
+		font-size: 26px;
+		line-height: 26px;
+	}	
+
+	.Text h3 {
+		color: rgb(20, 175, 194);
+		font-size: 36px;
+	}
+}
+
+@media (min-width: 980px) {
+	
+	.navbar {
+		height: 97px;
+	}
+
+	.main {
+		padding-top: 97px;
+	}	
+	
+	.Photoes {
+		width: 100vw;
+		margin-top: -4px;
+		display: grid;
+		grid-template-columns: repeat(3, 33.333vw)
+	}	
+	
+	.Photoes img {
+		width: 33.333vw;
+		height: 33vw;
+	}
+	.Text {
+		margin: 30px;
+		width: 100vw;
+		font-size: 26px;
+		line-height: 26px;
+	}
+	
+	.left-collom {
+		float: left;
+		width: 40vw;
+	}
+	
+	.right-collom {
+		float: left;
+		width: 40vw;
+		margin-left: 40px;
+		
+	}
+		
+
+	.Text h3 {
+		color: rgb(20, 175, 194);
+		font-size: 36px;
+	}
+}
+
+
+
+
+

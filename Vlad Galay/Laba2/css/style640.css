@@ -1,0 +1,55 @@
+body {
+	font-size: 36px;
+	font-style: roboto;
+	background-color: rgb(235, 235, 235);
+	margin:0;
+}
+
+h3 {
+	color: rgb(20, 175, 194);
+	margin-left: 30px;
+}
+
+p {
+	margin: 30px;
+	width: 580px;
+}
+
+div {
+	border:0;
+	line-height: 1px;
+	width: 640px;
+}
+.BigNavigation {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+.navigation {
+	width: 640px;
+}
+
+.awesome {
+	width: 640px;
+	height: 400px;
+}
+
+.arow {
+	width: 640px;
+	height: 640px;
+}
+
+.bridge {
+	width: 640px;
+	height: 640px;
+}
+
+.smile {
+	width: 640px;
+	height: 640px;
+}
+
+.Robin {
+	width: 640px;
+}
