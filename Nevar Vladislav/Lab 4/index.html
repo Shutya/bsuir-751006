@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>SimpleNews</title>
+
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   <header>
+      <div class="header_items">
+         <div class="header_text">
+            SimpleNews
+         </div>
+
+         <div class="search">
+            <select name="search-source" class="search_source" id="search_source">
+               <option value="none" selected>Любой издатель</option>
+            </select>
+            <input type="text" name="search-input" class="search_input" id="search_input">
+            <input type="button" name="search-button" value="Search" class="search_button" id="search_button">
+         </div>
+      </div>
+   </header>
+
+   <main class="main">
+      <section class="news">
+         <div class="out_news">
+            <h1 class="center">Last News</h1>
+            <div class="news" id="news">
+
+            </div>
+            <div class="center">
+            <button type="button" name="next-news" class="next_news" id="next-news">Other News</button>
+            </div>
+
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      
+   </footer>
+   <script type="text/javascript" src="script/script.js">
+   </script>
+</body>
