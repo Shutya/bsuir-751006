@@ -1,0 +1,382 @@
+.top-menu{
+    height: 97px;
+    display: flex;
+    background-color: #373c3f;
+    color: #ebebeb;
+    padding-left: 5%;
+}
+
+.top-menu ul{
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    height: 12px;
+}
+
+.top-menu .top-menu__item {
+    padding: 8px;
+    margin-top: 27px;
+    font-size: 14px;
+    font-weight: 100px;
+    color:  #ebebeb;
+    font-family: Arial;
+}
+
+.top-menu .top-menu__item:nth-child(1){
+    display: none;
+}
+
+.navigation-menu{
+    display: none;
+}
+
+.pds{
+    background-color: #0ca3b9;
+    color: #ffffff;
+    height: 578px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 7%;
+    justify-content: center;
+}
+
+.pds h1{
+    font-size: 50px;
+    width: 60%;
+}
+
+.link-arrow{
+    font-size: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+.link-arrow a{
+    color: #8acad5;
+    width: 60%;
+}
+
+.link-arrow i{
+    color: #ffffff;
+    width: 55%;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+}
+
+.robin-hood-psd__section{
+    height: 245px;
+    display: flex;
+	flex-direction: row;
+    justify-content: space-between; 
+    background-color: #27212c;
+    padding: 0;
+}
+
+.robin-hood-psd__section--left{
+    background-color: #27212c;
+    color: #9383a1;
+    width: 75%;
+    font-size: 32px;
+    margin: auto;
+    padding-left: 7%;
+}
+
+.robin-hood-psd__section--right{
+    display: flex;
+    background-color: #bc3183;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.robin-hood-psd__section--right i{
+    color: #ffffff;
+}
+
+.photos {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    height: 341px;
+}
+
+.photos div{
+    display: flex;
+    flex: 1;
+}
+
+.photos__arrow{
+    display: flex;
+    background-color: #5b0fa1;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.photos__arrow i{
+    color: #ffffff;
+}
+
+.photos img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer{
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__site{
+    color: #088ca5;
+    font-size: 32px;
+	margin-top: 35px;
+	margin-left: 40px;
+	margin-bottom: 0;
+}
+
+.footer__text{
+    color: #6e6e6e;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.footer__text li{
+    height: auto;
+    flex-wrap: wrap;
+    width: 40%;
+	margin-right: 35px;
+    margin-left: 40px;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 980px){
+    .top-menu{
+        height: 97px;
+    }
+    
+    .pds{
+        height: 549px;
+    }
+    
+    .robin-hood-psd__section{
+        height: 234px;
+    }
+
+    .photos {
+        height: 327px;
+    }
+} 
+
+
+@media screen and (max-width: 640px){
+    .top-menu{
+        height: 74px;
+        justify-content: space-between;
+    }
+    
+    .top-menu ul{
+        text-transform: none;
+    }
+    
+    .top-menu .top-menu__item{
+        display: none;
+    }
+    
+    .top-menu .top-menu__item:nth-child(1){
+        display: flex;
+        font-size: 17px;
+        font-weight: 100px;
+        font-family: Arial;
+        padding: 1.6px;
+    }
+    
+    .navigation-menu{
+        display: flex;
+        flex-direction: row;
+        font-size: 28px;
+        justify-content: center;
+        align-items: center;
+        padding-right: 4%; 
+        background-color: #202529;
+    }
+
+    .navigation-menu i{
+        color: #ffffff;
+        width: 40px;
+        padding-left: 50%;
+    }
+    
+    .pds{
+        height: 348px;
+        padding-bottom: 0;
+    }
+    
+    .awesome-pds h1{
+        font-size: 40px;
+        width: 80%;
+    }
+    
+    .link-arrow{
+        font-size: 26px;
+    }
+    
+    .robin-hood-psd__section{
+        height: 153px;
+    }
+    
+    .robin-hood-psd__section--left{
+        font-size: 22px;
+    }
+    
+    .robin-hood-psd__section--right{
+        font-size: 32px;
+    }
+    
+    .photos {
+        flex-direction: column;
+        height: 1668px;
+    }
+    
+    .photos div{
+        height: 556px;
+    }
+    
+    .photos__arrow{
+        font-size: 80px;
+    }    
+    
+    .footer__site{
+        font-size: 22px;
+        margin-top: 35px;
+        margin-left: 35px;
+    }
+    
+    .footer__text{
+        flex-direction: column;
+        font-size: 18px;
+        margin-top: 0;
+    }
+    
+    .footer__text li{
+        width: 90%;
+        margin-right: 1px;
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .top-menu{
+        height: 37px;
+        justify-content: space-between;
+    }
+
+    body{
+        min-width: 320px;
+    }
+    
+    .top-menu ul{
+        height: 6px;
+        text-transform: none;
+    }
+    
+    .top-menu .top-menu__item{
+        display: none;
+        margin-top: 0.6rem;
+    }
+    
+    .top-menu .top-menu__item:nth-child(1){
+        display: flex;
+        font-size: 12px;
+        font-weight: 90px;
+        font-family: Arial;
+    }
+    
+    .navigation-menu{
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+        padding-right: 4%; 
+        background-color: #202529;
+    }
+
+    .navigation-menu i{
+        color: #ffffff;
+        width: 30px;
+        padding-left: 50%;
+    }
+    
+    .pds{
+        height: 174px;
+        padding-bottom: 0;
+    }
+    
+    .pds h1{
+        font-size: 20px;
+        width: 80%;
+    }
+    
+    .link-arrow{
+        font-size: 16px;
+    }
+    
+    .link-arrow a{
+        width: 60%;
+    }
+    
+    .robin-hood-psd__section{
+        height: 77px;
+    }
+    
+    .robin-hood-psd__section--left{
+        font-size: 13px;
+    }
+    
+    .robin-hood-psd__section--right{
+        font-size: 18px;
+    }
+    
+    .photos {
+        flex-direction: column;
+        height: 834px;
+    }
+    
+    .photos div{
+        height: 278px;
+    }
+    
+    .photos__arrow{
+        font-size: 50px;
+    }    
+    
+    .footer__site{
+        font-size: 22px;
+        margin-top: 35px;
+        margin-left: 35px;
+    }
+    
+    .footer__text{
+        flex-direction: column;
+        font-size: 16px;
+        margin-top: 0;
+    }
+    
+    .footer__text li{
+        width: 80%;
+        margin-right: 2px;
+        margin-left: 35px;
+    }
+}
