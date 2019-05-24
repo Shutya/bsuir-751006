@@ -411,7 +411,7 @@ function getCommonDirectoryPath(pathes) {
         if (pathes[0][lastEqual] != pathes[pathes.length - 1][lastEqual]) {
             break;
         }
-        if (pathes[0][lastEqual] == '/') {
+        if (pathes[0][lastEqual] === '/') {
             lastDirDelimiter = lastEqual;
         }
     }
