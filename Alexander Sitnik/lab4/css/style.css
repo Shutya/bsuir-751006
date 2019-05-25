@@ -1,0 +1,242 @@
+
+@font-face{
+	
+font-family: "Rodchenko"; 
+// адрес шрифта и тип 
+src: url("../fonts/rodchenkoctt.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+}
+
+body {
+	background-image: url (97.png);
+	 background-position: left bottom; /* Положение фона */
+    background-repeat: repeat-x; /* Повторяем фон по горизонтали */
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    /*color: #333;*/
+	
+   margin: 0;
+   padding: 0;
+}
+
+body .header {
+   background: #549ef7;
+   width: 100%;
+   text-align:center;
+   height: 70px;
+}
+
+
+.header .logo a{
+   font-size: 40px;
+}
+
+.logo a {
+	
+    text-decoration: none;
+    font-family: "RodchenkoCTT",RodchenkoCTT;
+    display: inline-block;
+    padding: 17px 0 31px 31px;
+    font-size: 1.25rem;
+    color: #1d1c1c;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.main {
+   margin: 0 auto;
+   min-height: calc(100vh - 180px - 70px - 60px - 50px)
+}
+
+.more_button{
+	margin-left:auto;
+	margin-right:auto;
+	width:6em;
+}
+section h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Montserrat",sans-serif;
+    color: #585858;
+}
+
+section h1:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 60px;
+    background-color: #000;
+    margin-top: 19px;
+    margin-bottom: 18px;
+}
+
+.about img {
+   width: 300px;
+   text-align: right;
+}
+
+.about__text {
+    width: 45%;
+    display: inline-block;
+    float: left;
+}
+
+.news__item {
+   height: 200px;
+}
+
+.about__text p{
+    font-size: 1.0625rem;
+    font-weight: 400;
+    color: #606060;
+    letter-spacing: .3px;
+    padding: 19px 30px 0 0px;
+}
+
+.about__img {
+    width: 48%;
+    display: inline-block;
+    text-align: right;
+}
+
+footer {
+   margin-top: 80px;
+   background: #549ef7;
+}
+
+footer .logo a {
+	margin-left:auto;
+	margin-right:auto;
+	width:20em;
+   font-size: 50px;
+}
+footer .logo {
+   text-align: center;
+}
+
+
+
+footer {
+   height: 180px;
+}
+
+
+.warning{
+	display:none;
+}
+
+.news_image {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+.news_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.news_image .news__item__caption h4 {
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+.news_image .news__item__caption p {
+    margin: 15px 0px;
+    text-align: center;
+    font-style: italic;
+    padding: 0px 10px;
+}
+
+.news__item {
+   background: #549ef7;
+   padding: 5px;
+   position: relative;
+   margin: 20px 0;
+   overflow: hidden;
+}
+
+.Source {
+   font-family: "RodchenkoCTT",RodchenkoCTT;
+   font-size: 30px;
+}
+
+.NewsDescription h2 {
+   margin: 0;
+   font-family:"RodchenkoCTT",RodchenkoCTT;
+   font-size:25px;
+}
+.NewsDescription {
+    padding: 15px 25px;
+    color: #fff;
+	margin-left: 350px;
+	margin-right:350px;
+}
+
+
+.more_news {
+	text-align:center;
+    background: #549ef7;
+    padding: 15px 50px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.filter_source {
+    height: 33px;
+    margin-right: 15px;
+    padding: 0px 15px;
+}
+
+.news_image, .news__description {
+   display: inline-block;
+}
+
+
+h1.center {
+   text-align: center;
+}
+
+h1.center:after{
+   margin: 17px auto;
+}
+
+.search {
+   text-align:center;
+   padding: 18px 20px;
+}
+
+.search__button  {
+    padding: 8px 20px;
+    background: #fff;
+    border: none;
+    font-size: 15px;
+}
+
+.search__input {
+   padding: 7px 20px;
+   margin-right: 15px;
+   margin-top: 2px;
+}
+
+.attribution {
+	text-align:center;
+	
+}
+.attribution a{
+	text-decoration: none;
+}
+
+.news__description {
+   width: calc(100% - 470px);
+}
+f63fd8c0fe334eab812f2676f2060be3
