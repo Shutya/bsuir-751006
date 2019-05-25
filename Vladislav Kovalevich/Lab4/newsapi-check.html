@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Lab-4</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    var url = 'https://newsapi.org/v2/top-headlines?apiKey=0b923be3b47c46a7ad0592cd4950c6f3';
+
+    var page = 1;
+    var index = 1;
+
+    function prepareURL() {
+      var country = document.getElementById("countryField").value.trim();
+      var category = document.getElementById("categoryField").value.trim();
+      var source = document.getElementById("sourceField").value.trim();
+      var query = document.getElementById("queryField").value.trim();
+
+      var ret = url;
+
+      if (country.length > 0) {
+        ret = ret + '&country=' + country;
+      }
+
+      if (category.length > 0) {
+        ret = ret + '&category=' + category;
+      }
+
+      if (source.length > 0) {
+        ret = ret + '&sources=' + source;
+      }
+
+      if (query.length > 0) {
+        ret = ret + '&q=' + query;
+      }
+
+      ret = ret + '&pageSize=5';
+      ret = ret + '&page=' + page;
+
+      return ret;
+    }
+
+    function checkNewsApi() {
+      if (index >= 40) {
+        alert('No more then 40 news');
+        return;
+      }
+
+      var ul = document.getElementById("news-list");
+      var requestURL = prepareURL();
+      console.log(requestURL);
+
+      var req = new Request(requestURL);
+
+      fetch(req).then(function(response) {
+        response.json().then(function(data) {
+          console.log(data);
+
+          if (data.totalResults == 0) {
+            alert("There are no articles matching your request");
+            return;
+          }
+
+          if ((data.totalResults > 0) && (data.articles.length == 0)) {
+            alert("No more articles");
+            return;
+          }
+
+          for (var i = 0; i < data.articles.length; i++) {
+            if (index <= 40) {
+              var li = document.createElement("li");
+			  
+			  var imgLeft = document.createElement("img");
+			  
+			  var divLeft = document.createElement("div");
+			  var divRight = document.createElement("div");
+
+              li.setAttribute('id', 'liItem' + index);
+			  divLeft.setAttribute('class', 'Leftdiv');
+			  divRight.setAttribute('class', 'Rightdiv');
+              
+			  imgLeft.setAttribute('src', data.articles[i].urlToImage);
+			  divLeft.appendChild(imgLeft);
+              
+              var linkNode = document.createElement("a");
+              linkNode.setAttribute('href', data.articles[i].url);
+              linkNode.appendChild(document.createTextNode(data.articles[i].title));
+			
+			  divRight.appendChild(linkNode);
+			  
+			  var nextLine = document.createElement("br");
+			  divRight.appendChild(nextLine);
+			  divRight.appendChild(document.createTextNode(data.articles[i].description));
+			 
+              li.appendChild(divLeft);
+			  li.appendChild(divRight);
+              ul.appendChild(li);
+
+              index = index + 1;
+            }
+          }
+        })
+
+        
+      })
+
+      page = page + 1;
+    }
+	
+	function getNews(){
+		var ul = document.getElementById("news-list");
+		
+		while(ul.hasChildNodes()){
+		    ul.removeChild(ul.firstChild);
+		}
+		
+		page = 1;
+		index = 1;
+		checkNewsApi();
+	}
+
+  </script>
+</head>
+
+<body onload="checkNewsApi()">
+  <div class="headh1"><h1>News API</h1></div>
+  <div class="searchPanel">
+     <div class="headh2"><h2>Панель поиска</h2></div>
+     <div>Country:  <input type="text" id="countryField" name="countryField" value="ru"><br></div>
+     <div>Category: <input type="text" id="categoryField" name="categoryField"><br></div>
+     <div>Source:   <input type="text" id="sourceField" name="sourceField"><br></div>
+     <div>Query:    <input type="text" id="queryField" name="queryField"><br><br></div>
+	 <div class="btnStart"><button onclick='getNews()'>View</button></div>
+  </div>
+  
+  <div class="list">
+     <ul id='news-list'>
+     </ul>
+  </div>
+  
+  <div class="btn"><button onclick='checkNewsApi()'>Load more</button></div>
+  <div class="empty">
+  </div>
+  <footer>
+     <p>©Copyright, footer</p>
+  </footer>
+</body>
+</html> 
