@@ -1,0 +1,33 @@
+body{
+	background-color: #FFFFFF;
+}
+
+h3{
+	margin-bottom:20px; 
+	color: red;
+}
+
+.topnews{
+	margin-left: 13%;
+}
+
+#searchquery{
+	color: black;
+}
+
+#countries{
+	margin-bottom: 0px;
+	color: white; 
+	font-size: 25px;
+}
+
+#loadbtn{
+	margin-top:30px; 
+	margin-bottom: 30px;
+}
+
+#sources{
+	margin-bottom: 0px;
+	color: white; 
+	font-size: 25px;
+}
