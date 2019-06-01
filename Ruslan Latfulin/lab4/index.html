@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NewsAPI</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <ul class="navbar">
+                        <li>
+                            <select name="search-source" id="search-source">
+                                <option value="none" selected>Все издательства</option>
+                            </select>
+                            <input type="text" id="search-input" class="input-find" placeholder="Поиск">
+                            <button type="submit" class="button-search" id="button-search">Найти</button>    
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="flex" id="News">
+        </div>
+        <button type="button" name="more" id="more">Показать больше</button>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
