@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Api</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    
+    <div class="container">
+      
+      <h3 class="center">News API</h3>
+
+      <form>
+          <div class="input-field">
+              <input type="text" id="searchquery">
+          </div>
+          
+          <div class="row">
+             <button type="submit" id="searchbtn" class="btn col m2 s12 green" value="search">Search
+              <i class="material-icons right">search</i>
+             </button>
+             <button type="reset" id="searchbtn" class="btn col m2 s12 red right" value="search">Clear
+              <i class="material-icons right">clear</i>
+             </button>
+          </div>      
+      </form>
+
+    <div class="row">
+      <div  class="col s12 m4 l2">
+        <ul class="sources-left">
+            <p id="countries">Countries</p>
+            <hr>
+            <li><input type="submit" class="btn col m12 s12" id="australiabtn" value="Australia"></li>
+            <li><input type="submit" class="btn col m12 s12" id="austriabtn" value="Austria"></li>
+            <li><input type="submit" class="btn col m12 s12" id="belgiumbtn" value="Belgium"></li>
+            <li><input type="submit" class="btn col m12 s12" id="bulgarybtn" value="Bulgaria"></li>
+            <li><input type="submit" class="btn col m12 s12" id="francebtn" value="France"></li>
+            <li><input type="submit" class="btn col m12 s12" id="germanybtn" value="Germany"></li>
+            <li><input type="submit" class="btn col m12 s12" id="hungarybtn" value="Hungary"></li>
+            <li><input type="submit" class="btn col m12 s12" id="indiabtn" value="India"></li>
+            <li><input type="submit" class="btn col m12 s12" id="irelandbtn" value="Ireland"></li>
+            <li><input type="submit" class="btn col m12 s12" id="italybtn" value="Italy"></li>
+            <li><input type="submit" class="btn col m12 s12" id="latviabtn" value="Latvia"></li>
+            <li><input type="submit" class="btn col m12 s12" id="mexicobtn" value="Mexico"></li>
+            <li><input type="submit" class="btn col m12 s12" id="netherbtn" value="Netherlands"></li>
+            <li><input type="submit" class="btn col m12 s12" id="newzelbtn" value="New Zealand"></li>
+            <li><input type="submit" class="btn col m12 s12" id="norwaybtn" value="Norway"></li>
+            <li><input type="submit" class="btn col m12 s12" id="phillbtn" value="Philippines"></li>
+            <li><input type="submit" class="btn col m12 s12" id="polandbtn" value="Poland"></li>
+            <li><input type="submit" class="btn col m12 s12" id="russiabtn" value="Russia"></li>
+            <li><input type="submit" class="btn col m12 s12" id="serbiabtn" value="Serbia"></li>
+            <li><input type="submit" class="btn col m12 s12" id="slovakiabtn" value="Slovakia"></li>
+            <li><input type="submit" class="btn col m12 s12" id="swedenbtn" value="Sweden"></li>
+            <li><input type="submit" class="btn col m12 s12" id="switzerlandbtn" value="Switzerland"></li>
+            <li><input type="submit" class="btn col m12 s12" id="turkeybtn" value="Turkey"></li>
+            <li><input type="submit" class="btn col m12 s12" id="uaebtn" value="UAE"></li>
+            <li><input type="submit" class="btn col m12 s12" id="ukrainebtn" value="Ukraine"></li>
+            <li><input type="submit" class="btn col m12 s12" id="ukbtn" value="United Kingdom"></li>
+            <li><input type="submit" class="btn col m12 s12" id="usbtn" value="US"></li>
+            <li><input type="submit" class="btn col m12 s12" id="venezuelabtn" value="Venezuela"></li>
+        </ul>
+      </div>
+      
+      <div  class="col s12 m4 l8">
+         <div id="newsResults"></div>
+         <input type="hidden" id="loadbtn" class="btn col m22 s12" value="Load More">
+      </div>
+
+      <div class="col s12 m4 l2">
+        <ul class="sources-right">
+            <p id="sources">Sources</p>
+            <hr>
+            <li><input type="submit" class="btn col m12 s12" id="abcnewsbtn" value="ABC News (AU)"></li>
+            <li><input type="submit" class="btn col m12 s12" id="asspbtn" value="Associated Press"></li>
+            <li><input type="submit" class="btn col m12 s12" id="bbcbtn" value="BBC News"></li>   
+            <li><input type="submit" class="btn col m12 s12" id="bbcsportbtn" value="BBC Sport"></li>
+            <li><input type="submit" class="btn col m12 s12" id="insiderbtn" value="Business Inside"></li>
+            <li><input type="submit" class="btn col m12 s12" id="cnbcbtn" value="CNBC"></li> 
+            <li><input type="submit" class="btn col m12 s12" id="cnnbtn" value="CNN"></li>
+            <li><input type="submit" class="btn col m12 s12" id="financial-timesbtn" value="Financial Times"></li>
+            <li><input type="submit" class="btn col m12 s12" id="fortunebtn" value="Fortune"></li>    
+            <li><input type="submit" class="btn col m12 s12" id="googlebtn" value="Google News"></li>
+            <li><input type="submit" class="btn col m12 s12" id="hackerbtn" value="Hacker News"></li>
+            <li><input type="submit" class="btn col m12 s12" id="Independentbtn" value="Independent"></li>   
+            <li><input type="submit" class="btn col m12 s12" id="mtvbtn" value="MTV News"></li>
+            <li><input type="submit" class="btn col m12 s12" id="natgeobtn" value="National Geographic"></li>
+            <li><input type="submit" class="btn col m12 s12" id="Newsweekbtn" value="Newsweek"></li>      
+            <li><input type="submit" class="btn col m12 s12" id="nflbtn" value="NFL News"></li>   
+            <li><input type="submit" class="btn col m12 s12" id="polygonbtn" value="Polygon"></li>
+            <li><input type="submit" class="btn col m12 s12" id="Recodebtn" value="Recode"></li>
+            <li><input type="submit" class="btn col m12 s12" id="Reutersbtn" value="Reuters"></li> 
+            <li><input type="submit" class="btn col m12 s12" id="TalkSportbtn" value="TalkSport"></li>
+            <li><input type="submit" class="btn col m12 s12" id="TechRadarbtn" value="TechRadar"></li>
+            <li><input type="submit" class="btn col m12 s12" id="economistbtn" value="The Economist"></li>    
+            <li><input type="submit" class="btn col m12 s12" id="hindubtn" value="The Hindu"></li>
+            <li><input type="submit" class="btn col m12 s12" id="biblebtn" value="The Lad Bible"></li>
+            <li><input type="submit" class="btn col m12 s12" id="nytimesbtn" value="The New York Times"></li>   
+            <li><input type="submit" class="btn col m12 s12" id="timebtn" value="Time"></li>
+            <li><input type="submit" class="btn col m12 s12" id="washpostbtn" value="The Washington Post"></li>
+            <li><input type="submit" class="btn col m12 s12" id="usatodaybtn" value="USA Today"></li>  
+        </ul>
+      </div>
+
+    </div>
+   </div>
+
+<script src="newsapi.js"></script>
+
+</body>
+</html>
