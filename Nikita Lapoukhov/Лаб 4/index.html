@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="keywords" content="news api">
+        <title>News Api</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+				<h3>News API</h3>
+                <nav>
+                    <ul>
+                        <li>
+                			<input type="text" id="searchInput" class="input-find" placeholder="Search...">
+                			<button type="submit" class="button-find" id="searchButton">Search</button>
+							<select name="searchSource" id="searchSource">
+                                <option value="none" selected>All editions</option>
+                            </select>
+                        </li>	
+                    </ul>
+                </nav>
+            </div>          
+        </header>
+		<div class="line"></div>
+        <div class="flex-container" id="AllNews">
+		
+        </div>
+        <button id="load_more" type="load_more" name="load_news">Load more</button>
+        <script type="text/javascript" src="js/news.js"></script>
+    </body>
+</html>
