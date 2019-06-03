@@ -1,0 +1,44 @@
+{
+  "name": "News",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "express": "^4.17.0",
+    "morgan": "^1.9.1",
+    "newsapi": "^2.4.0",
+    "path": "^0.12.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-scroll-horizontal": "^1.6.2",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^6.1.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "^3.5.1"
+  },
+  "scripts": {
+    "start": "npm run build && node server.js",
+    "build": "webpack --mode development"
+  },
+  "keywords": [],
+  "author": "Gregory Kiselev",
+  "license": "ISC"
+}
