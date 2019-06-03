@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-size: 17px;
+  line-height: 1.42857143;
+  color: #fff; 
+  background: #1d465b;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+   background: #122e3d;
+   width: 100%;
+   height: 70px;
+}
+.header__wrapper {
+   width: 80%;
+   margin: 0 auto;
+}
+
+.header__wrapper div, .header__wrapper nav{
+   display: inline-block;
+}
+
+.header .logo a{
+   font-size: 60px;
+}
+
+.black-logo a span {
+   color: #000;
+   -webkit-text-stroke: 1px white;
+}
+
+.black-logo a{
+    color: #b1c0d3;
+}
+
+.main {
+   padding-top: 50px;
+   width: 100%;
+   margin: 0 auto;
+   min-height: calc(100vh - 180px - 70px - 60px - 50px)
+}
+
+.about__img {
+    width: 48%;
+    display: inline-block;
+    text-align: left;
+}
+
+.social ul li {
+   display: inline-block;
+}
+
+.news__item__card {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news__item__card img {
+    width: 100%;
+    height: 100%;
+}
+
+.news__item__card .news__item__caption {
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    background: rgba(0,0,0,0.7);
+    width: 60%;
+    height: 100%;
+    color: #fff;
+    -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 1, 1) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.4, 0, 1, 1) 0s;
+    -ms-transition: all 0.3s cubic-bezier(0.4, 0, 1, 1) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.4, 0, 1, 1) 0s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1) 0s;
+    display: table;
+}
+.news__item__card div.news-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.news__item__card .news__item__caption h4 {
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+.news__item__card .news__item__caption p {
+    margin: 15px 0px;
+    text-align: center;
+    font-style: italic;
+    padding: 0px 10px;
+}
+.news-icons {
+    text-align: center;
+}
+
+.icon-news {
+    color: #fff;
+    font-size: 32px;
+    padding: 5px;
+}
+
+.news__item {
+   background: #0c202b;
+   padding: 5px;
+   position: relative;
+   margin: 20px 0;
+   overflow: hidden;
+}
+
+.news__source {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+    bottom: 10px;
+}
+
+.news__description h2 {
+   margin: 0;
+   border-bottom: 1px solid #fff;
+}
+.news__description {
+    padding: 15px 25px;
+    color: #fff;
+}
+
+.next-news {
+    background: #000;
+    padding: 15px 50px;
+    margin-left: 42%;
+    font-size: 20px;
+}
+
+.search__source {
+    height: 33px;
+    margin-right: 15px;
+    padding: 0px 15px;
+}
+
+.news__item__card, .news__description {
+   display: inline-block;
+}
+
+.news__item__card:hover .news__item__caption {
+    /*top: 0px;*/
+}
+h1.center {
+   text-align: center;
+}
+
+h1.center:after{
+   margin: 17px auto;
+}
+
+.search {
+   float:  right;
+   padding: 18px 0px;
+}
+
+.search__button  {
+    padding: 8px 20px;
+    background: #b1c0d3;
+    border: none;
+    font-size: 15px;
+}
+
+.search__input {
+   padding: 7px 20px;
+   margin-right: 15px;
+   margin-top: 2px;
+}
+
+::-webkit-input-placeholder {color:#fff;}
+::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#fff;}
+
+.news__description {
+   width: calc(100% - 470px);
+}
+
+@media(max-width: 1000px) {
+
+   body {
+      font-size: 20px;
+   }
+   .contact-form {
+       width: 100%;
+       margin: 0 auto;
+   }
+
+   .contact-input {
+      width: calc(100% - 40px);
+   }
+
+   .news__item {
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+   }
+
+   .about__text {
+       width: 100%;
+       display: block;
+       float: none;
+   }
+
+   .about__img {
+       width: 100%;
+       display: block;
+       float: none;
+       text-align: center;
+   }
+   .main {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 80px;
+   }
+   .header {
+      position: fixed;
+      z-index: 9999;
+   }
+
+   .item-portfolio {
+      display: block;
+      width: 100%;
+   }
+
+}
+
