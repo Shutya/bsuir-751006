@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;        
+    background-color: #ecf0f1;
+}
+
+/* HEADER begin */
+
+header {
+    color: #ffffff;
+    background-image: url(gif/title.jpg);   
+    padding-top: 30px;
+    min-height: 70px;   
+    width: 100%;
+}
+
+/* Внутренности header'а */
+header .container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Лого */
+header .branding {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin: 10px;
+}
+
+header .branding h1 {
+    margin: 0;
+    color: NavajoWhite;
+	text-shadow: 2px 2px 2px Peru,
+               -2px 2px 2px Chocolate;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    float: left;
+	
+    display: inline;
+    padding: 2px 10px 2px 10px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header .current a {
+    color: #3498db;
+    font-weight: bold;
+}
+
+header a:hover {
+    color:#3498db;
+    font-weight:bold;
+}
+
+/* HEADER end */
+
+/* SEARCH BAR begin */
+
+form {
+    width: auto;
+    float: right;
+}
+.body_kek {
+    background: SandyBrown;
+}
+
+#searchInput {
+	padding-top: 5px;
+    height: 22px;
+    width: 150px;  
+	font-size: 18px;
+}
+
+
+#searchButton {
+	background: linear-gradient(to bottom right, Orange, Yellow);
+	border: 1px solid Peru;
+	border-radius: 3vw 3vw 3vw 3vw;
+	
+    height: 32px;
+	width: 80px;
+	font-size: 18px;
+	padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: Crimson;
+	text-shadow: 1px 1px 1px Gold,
+               -1px 1px 1px Cornsilk;  
+}
+
+#searchSource {
+	padding-top: 5px;
+	height: 33px;
+	font-size: 18px;
+}
+
+#searchButton:hover{
+    cursor: pointer;
+    background: Gold;
+}
+
+/* SEARCH BAR end */
+
+/* ARTICLE begin */
+
+.flex-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-flex; 
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+	background-image: url(gif/list.jpg);
+}
+@media screen and (max-width: 900px) {
+  .flex-container {
+    justify-content: center;
+  }
+}
+
+article.main {
+    padding: 10px;
+    background-color: #F7F9F4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+article.main .article-head, article.main .article-body {
+    max-width: 420px;
+    width: 100%;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;  
+}
+
+article.news {
+    padding: 10px;
+    background-color: #F7F9F4;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article.news, article.news .article-head, article .article-body {
+    max-width: 900px;
+    width: 100%;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;  
+}
+
+.article-head h2 {
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.article-head h2{
+    text-decoration: none;
+    color: #3498db;
+}
+
+.article-head h2 a{
+    text-decoration: none;
+    color: #3498db;
+}
+
+.article-head h2 a:hover {
+    text-decoration: none;
+    color: #004d00;
+}
+
+/* properties - дата публкации и т.п. */
+.article-head .article-properties {
+    color: lightslategray;
+}
+
+/* Изображение на превью, а также самое первое в полной новости */
+article .article-body .img-preview {
+    width: inherit;
+    max-width: inherit;
+}
+
+/* Контейнер для всех изображений в полной, кроме первого */
+article .article-body .image-container {
+    text-align: center;
+}
+
+/* Любое изображение в полной, кроме первого */
+article .article-body .img-full {
+    width: inherit;
+    max-width: inherit;
+    margin: 5px;
+}
+
+article .article-body .img-wallp {
+    width: 23%;
+    margin: 7px;
+}
+
+.article-body p {
+    font-family: serif;
+}
+
+.article-body .a-email {
+    font-family: monospace;    
+    font-size: 1.2em;
+}
+
+.article-body .important-bold {
+    font-weight: 700;
+}
+
+.article-body ul {
+    font-family: serif;
+}
+
+.img-preview {
+
+	max-width:100%;
+	max-height:100%;
+}
+
+#more_news {
+	color: Crimson;
+	text-shadow: 1px 1px 1px Gold,
+               -1px 1px 1px Cornsilk;  
+	background: linear-gradient(to bottom right, Orange, Yellow);
+	border: 1px solid Peru;
+    display:block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font: bold 22px arial, sans-serif;
+    text-shadow:none;
+    cursor: pointer;
+}
+#more_news:hover {
+    background: Gold;
+}
+
+/* ARTICLE end */
+
+/* FOOTER begin */
+
+footer {
+    padding:10px;  
+    background-image: url(gif/footer.jpg);
+    text-align: center;
+    margin-top: 30px;
+    font-size: 10pt;    
+}
+
+footer a {
+    text-decoration: none;
+    color: Gold;
+	font-size: 18px;
+	text-shadow: 1px 1px 1px Maroon,
+               -1px 1px 1px OrangeRed;
+}
+
+/* FOOTER end */ 
