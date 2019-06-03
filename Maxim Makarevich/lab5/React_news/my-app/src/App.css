@@ -1,0 +1,99 @@
+div .root{
+	background-color: darkkhaki;
+}
+body{
+	background-color: grey;
+	
+}
+h1{
+	font-style: italic;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: cyan;
+}
+
+header{
+	margin-bottom: 5%;
+}
+main{
+  position: absolute;
+  margin-left: 20%;
+	padding-bottom: 100px;
+}
+
+aside{	
+	padding-bottom: 100px;
+	width: 20%;
+}
+
+.btn_load_more{
+	margin-left: 50%;
+	font-size: 200%;
+
+}
+
+
+.btn_search_class{
+	float: right;
+	font-weight: bold;	
+}
+
+.btn_search_class:hover{
+	color: green;
+}
+
+.field_search_class{
+	float: right;
+}
+
+.news_class:hover{
+	color: red;
+	text-decoration: none;
+}
+
+.btn_choose_tag{
+	width: 50%;
+	height: 10%;
+	font-weight: bold;
+	padding-top: 5px; 
+	background-color: orangered;
+	color: white;	
+}
+
+.btn_choose_tag:hover{
+	color: green;	
+}
+
+img{
+	width: 80%;
+}
+
+hr{
+	height: 5px;
+	background-color: gray;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.news_class{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 120%;
+	font-style: italic;
+	
+}
+
+.source_btn{
+	width: 50%;
+	height: 10%;
+	font-weight: bold;
+	padding-top: 5px; 
+	background-color: black;
+	color: gold;
+	border-radius: 10px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.source_btn:hover{
+	color: green;	
+}
