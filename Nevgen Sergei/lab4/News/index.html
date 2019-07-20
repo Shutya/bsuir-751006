@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>News</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./dist/main.js"></script>
+    </head>
+<body>
+    <header>
+        <h1><a href="./index.html" style="color : white">News</a></h1>
+        <div class="user-data">
+            <a class="login-button" href="#">
+                <div class="login-button_circle"><span class="icon arrow"></span></div>
+                <p class="login-button_text">Log in</p>
+            </a>
+        </div>
+    </header>
+    <div class="sub-header">News</div>
+    <div class="hide-scroll">
+        <nav  class="sources-list">
+        </nav>
+    </div> 
+    <div class="sub-nav">
+        <div class="filter">
+            <form id="filterForm" class="ng-untouched ng-pristine ng-valid">
+                <fieldset>
+                    <input id="filterValue" placeholder="Filter" type="text" class="ng-untouched ng-pristine ng-valid">
+                    <input type="button" id="filterButton" class="button" value="Filter"/>
+                </fieldset>
+            </form>
+        </div><!----></div>
+    </div>
+    <div class="news">
+    </div>   
+    <div id="container">
+            <button class="load_more">
+              <div class="circle">
+                <span class="icon2 arrow2"></span>
+              </div>
+              <p class="button_text">Load More</p>
+            </button>
+    </div> 
+    <footer >
+        <p class="copyright">&copy; Copyright
+            <a href="https://newsapi.org">NewsAPI</a>
+        </p>
+    </footer>
+</body>  
+</html>
