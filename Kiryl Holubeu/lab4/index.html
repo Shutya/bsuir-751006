@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>KTF - всё обо всём</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="branding">
+                    <a href="index.html"><h1>KTF</h1></a>
+                </div>
+                <nav>
+                    <input type="submit" name="search-button" class="search_button" id="searchButton" value="Найти">
+                    <label for="searchSource"></label><select name="searchSource" id="searchSource">
+                        <option value="none" selected>Фильтр</option>
+                    </select>
+                    <input type="text" id="searchInput" class="input-find" placeholder="Search">
+                </nav>
+            </div>          
+        </header>
+        <div class="flex-container" id="NewsContainer">
+        </div>
+        <button id="more_news" type="button" name="more_news">More</button>
+        <footer>
+            <a>KTF 2019</a>
+        </footer>
+        <script type="text/javascript" src="js/api.js"></script>
+    </body>
+</html>
